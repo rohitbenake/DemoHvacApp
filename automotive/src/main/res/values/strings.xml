@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DemoHvacApp</string>
+    <string name="passenger_temp_string">%1d</string>
+    <string name="driver_temp_string">%1d</string>
+    <string name="increase">+</string>
+    <string name="decrease">-</string>
+    <string name="driver_temp_title_name">Driver Temparature</string>
+    <string name="passenger_temp_title_name">Passenger Temparature</string>
+</resources>
