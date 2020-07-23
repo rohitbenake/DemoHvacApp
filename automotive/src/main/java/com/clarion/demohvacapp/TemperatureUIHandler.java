@@ -147,7 +147,7 @@ public class TemperatureUIHandler {
             animator.setDuration(COLOR_CHANGE_ANIMATION_TIME_MS);
             animator.start();
         } else {
-            // ((GradientDrawable) mDriverTemp.getBackground()).setColor(endColor);
+
             Log.d(TAG, "changeTemperatureColor: endColor = "+endColor);
             mTempTextView.setBackgroundColor(endColor);
             ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(endColor);
@@ -159,7 +159,7 @@ public class TemperatureUIHandler {
         @Override
         public void onAnimationUpdate(ValueAnimator animation) {
             int color = (Integer) animation.getAnimatedValue();
-            //((GradientDrawable) mDriverTemp.getBackground()).setColor(color);
+
             Log.d(TAG, "onAnimationUpdate: color = "+color);
             mTempTextView.setBackgroundColor(color);
            // ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(color);
