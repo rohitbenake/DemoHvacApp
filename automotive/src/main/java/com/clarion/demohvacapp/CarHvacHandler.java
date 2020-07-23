@@ -174,10 +174,12 @@ public class CarHvacHandler {
     }
 
     public void setDriverTemperature(int temperature) {
+        Log.d(TAG, "setDriverTemperature: "+temperature);
         setTemperature(DRIVER_ZONE_ID, temperature);
     }
 
     public void setPassengerTemperature(int temperature) {
+        Log.d(TAG, "setPassengerTemperature: "+temperature);
         setTemperature(PASSENGER_ZONE_ID, temperature);
     }
 
