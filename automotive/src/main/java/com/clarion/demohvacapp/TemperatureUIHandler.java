@@ -3,10 +3,11 @@ package com.clarion.demohvacapp;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.telephony.mbms.MbmsErrors;
+import android.graphics.drawable.GradientDrawable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class TemperatureUIHandler {
@@ -17,6 +18,7 @@ public class TemperatureUIHandler {
     private int mTemperature = DEFAULT_TEMPERATURE;
     private boolean mIsOn = true;
 
+    private ProgressBar mProgressbar;
     private Button mIncreaseButton;
     private Button mDecreaseButton;
     private TextView mTempTextView;
@@ -41,7 +43,7 @@ public class TemperatureUIHandler {
         mListener =  listener;
     }
 
-    public void Initialize(Button inc,Button dec,TextView temp,int stringResId,Context context){
+    public void Initialize(Button inc,Button dec,TextView temp,ProgressBar bar,int stringResId,Context context){
 
         mTempColor1 = R.color.temperature_1;
         mTempColor2 = R.color.temperature_2;
@@ -56,6 +58,11 @@ public class TemperatureUIHandler {
         mDecreaseButton = dec;
         mIncreaseButton.setOnTouchListener(new PressAndHoldTouchListener(temperatureClickListener));
         mDecreaseButton.setOnTouchListener(new PressAndHoldTouchListener(temperatureClickListener));
+
+        mProgressbar = bar;
+        mProgressbar.setMax(MAX_TEMPERATURE);
+        mProgressbar.setMin(MIN_TEMPERATURE);
+        mProgressbar.setProgress(DEFAULT_TEMPERATURE);
 
         mStringResId = stringResId;
         mContext = context;
@@ -106,10 +113,14 @@ public class TemperatureUIHandler {
                     Log.d(TAG, "key not recognized");
                 }
                 int endColor = getTemperatureColor(mTemperature);
+                Log.d(TAG, "onClick: mTemperature ="+mTemperature+" startColor ="+startColor
+                +"endColor = "+endColor);
                 changeTemperatureColor(startColor, endColor);
                 String temp = String.valueOf(mTemperature);
                 mTempTextView.setText(mContext.getString(mStringResId,
                         temp));
+
+                mProgressbar.setProgress(mTemperature);
                 mListener.onTemperatureChanged(mTemperature);
             }
         }
@@ -137,7 +148,9 @@ public class TemperatureUIHandler {
             animator.start();
         } else {
             // ((GradientDrawable) mDriverTemp.getBackground()).setColor(endColor);
+            Log.d(TAG, "changeTemperatureColor: endColor = "+endColor);
             mTempTextView.setBackgroundColor(endColor);
+            ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(endColor);
         }
     }
 
@@ -147,7 +160,9 @@ public class TemperatureUIHandler {
         public void onAnimationUpdate(ValueAnimator animation) {
             int color = (Integer) animation.getAnimatedValue();
             //((GradientDrawable) mDriverTemp.getBackground()).setColor(color);
+            Log.d(TAG, "onAnimationUpdate: color = "+color);
             mTempTextView.setBackgroundColor(color);
+           // ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(color);
         }
     };
 

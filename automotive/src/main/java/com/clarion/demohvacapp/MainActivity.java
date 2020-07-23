@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         mDriverTemperatureUIHandler.Initialize((Button) findViewById(R.id.btn_driver_temp_inc),
                 (Button)findViewById(R.id.btn_driver_temp_dec),
                 (TextView) findViewById(R.id.driver_temp_textview),
+                (ProgressBar) findViewById(R.id.progressBar_temp_driver),
                 R.string.driver_temp_string,
                 this
                 );
@@ -43,10 +45,14 @@ public class MainActivity extends AppCompatActivity {
         mPassengerTemperatureUIHandler.Initialize((Button) findViewById(R.id.btn_passenger_temp_inc),
                 (Button)findViewById(R.id.btn_passenger_temp_dec),
                 (TextView) findViewById(R.id.passenger_temp_textview),
+                (ProgressBar) findViewById(R.id.progressbar_temp_passenger),
                R.string.passenger_temp_string,
                 this
         );
         mPassengerTemperatureUIHandler.setTemperatureChangeListener(mPassengerTempClickListener);
+
+        ProgressBar mProgressBar = findViewById(R.id.progressBar_temp_driver);
+        mProgressBar.setProgress(51);
 
         Log.i(TAG, "onCreate: calling EstablishCarServiceConnection");
         EstablishCarServiceConnection();

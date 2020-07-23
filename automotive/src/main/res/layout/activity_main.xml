@@ -28,17 +28,20 @@
         android:gravity="center|center_horizontal"
         android:text="@string/driver_temp_string"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar_temp_driver"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/progressBar"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        app:layout_constraintStart_toStartOf="@+id/progressBar_temp_driver"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar_temp_driver" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
+        android:id="@+id/progressBar_temp_driver"
+        style="?android:progressBarStyleHorizontal"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="24dp"
+        android:progress="32"
+        android:progressDrawable="@drawable/circle"
+        android:rotation="@dimen/progress_rot_val"
         app:layout_constraintEnd_toEndOf="@+id/btn_driver_temp_inc"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_driver_temp_inc"
@@ -46,15 +49,18 @@
 
     <ProgressBar
         android:id="@+id/progressbar_temp_passenger"
-        style="?android:attr/progressBarStyle"
+        style="?android:progressBarStyleHorizontal"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="56dp"
-        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        android:progress="100"
+        android:progressDrawable="@drawable/circle"
+        android:rotation="@dimen/progress_rot_val"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar_temp_driver"
         app:layout_constraintEnd_toEndOf="@+id/btn_passenger_temp_inc"
         app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="@+id/btn_passenger_temp_inc"
-        app:layout_constraintTop_toTopOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/progressBar_temp_driver"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -121,9 +127,9 @@
         android:text="@string/driver_temp_title_name"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar_temp_driver"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="@+id/progressBar_temp_driver"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.115" />
 
