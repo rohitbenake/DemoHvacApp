@@ -7,12 +7,14 @@
     android:background="@color/hvac_module_background_color"
     tools:context=".MainActivity">
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_driver_temp_inc"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/increase"
+        android:background="@color/temperature_1"
+        android:src="@drawable/ic_increase_icon"
+        android:contentDescription="@string/content_decription"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.198"
@@ -39,6 +41,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="24dp"
+        android:background="?android:attr/listChoiceIndicatorSingle"
         android:progress="32"
         android:progressDrawable="@drawable/circle"
         android:rotation="@dimen/progress_rot_val"
@@ -53,6 +56,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="56dp"
+        android:background="?android:attr/listChoiceIndicatorSingle"
         android:progress="100"
         android:progressDrawable="@drawable/circle"
         android:rotation="@dimen/progress_rot_val"
@@ -61,17 +65,17 @@
         app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="@+id/btn_passenger_temp_inc"
         app:layout_constraintTop_toTopOf="@+id/progressBar_temp_driver"
-        app:layout_constraintVertical_bias="0.0"
-        />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_driver_temp_dec"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/decrease"
-        android:textColor="@android:color/background_light"
+        android:background="@color/hvac_fanspeed_segment_color"
+        android:src="@drawable/ic_decrease_icon"
+        android:contentDescription="@string/content_decription"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_driver_temp_inc"
         app:layout_constraintHorizontal_bias="1.0"
@@ -79,13 +83,15 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_driver_temp_inc"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_passenger_temp_inc"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="88dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
-        android:text="@string/increase"
+        android:background="@color/temperature_1"
+        android:src="@drawable/ic_increase_icon"
+        android:contentDescription="@string/content_decription"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.789"
@@ -93,13 +99,15 @@
         app:layout_constraintTop_toBottomOf="@+id/passenger_temp_textview"
         app:layout_constraintVertical_bias="0.05" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_passenger_temp_dec"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/decrease"
+        android:background="@color/hvac_fanspeed_segment_color"
+        android:src="@drawable/ic_decrease_icon"
+        android:contentDescription="@string/content_decription"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_passenger_temp_inc"
         app:layout_constraintHorizontal_bias="0.0"

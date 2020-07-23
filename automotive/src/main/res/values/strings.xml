@@ -7,4 +7,5 @@
     <string name="driver_temp_title_name">Driver Temparature</string>
     <string name="passenger_temp_title_name">Passenger Temparature</string>
     <string name="hvac_invalid_temperature">--</string>
+    <string name="content_decription">This is image button</string>
 </resources>

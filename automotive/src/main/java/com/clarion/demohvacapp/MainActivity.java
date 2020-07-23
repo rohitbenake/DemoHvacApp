@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -32,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mDriverTemperatureUIHandler.Initialize((Button) findViewById(R.id.btn_driver_temp_inc),
-                (Button)findViewById(R.id.btn_driver_temp_dec),
+        mDriverTemperatureUIHandler.Initialize((ImageButton) findViewById(R.id.btn_driver_temp_inc),
+                (ImageButton)findViewById(R.id.btn_driver_temp_dec),
                 (TextView) findViewById(R.id.driver_temp_textview),
                 (ProgressBar) findViewById(R.id.progressBar_temp_driver),
                 R.string.driver_temp_string,
@@ -42,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
         mDriverTemperatureUIHandler.setTemperatureChangeListener(mDriverTempClickListener);
 
-        mPassengerTemperatureUIHandler.Initialize((Button) findViewById(R.id.btn_passenger_temp_inc),
-                (Button)findViewById(R.id.btn_passenger_temp_dec),
+        mPassengerTemperatureUIHandler.Initialize((ImageButton) findViewById(R.id.btn_passenger_temp_inc),
+                (ImageButton)findViewById(R.id.btn_passenger_temp_dec),
                 (TextView) findViewById(R.id.passenger_temp_textview),
                 (ProgressBar) findViewById(R.id.progressbar_temp_passenger),
                R.string.passenger_temp_string,

@@ -7,6 +7,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -19,8 +20,8 @@ public class TemperatureUIHandler {
     private boolean mIsOn = true;
 
     private ProgressBar mProgressbar;
-    private Button mIncreaseButton;
-    private Button mDecreaseButton;
+    private ImageButton mIncreaseButton;
+    private ImageButton mDecreaseButton;
     private TextView mTempTextView;
     private int mStringResId;
     Context mContext;
@@ -43,7 +44,7 @@ public class TemperatureUIHandler {
         mListener =  listener;
     }
 
-    public void Initialize(Button inc,Button dec,TextView temp,ProgressBar bar,int stringResId,Context context){
+    public void Initialize(ImageButton inc,ImageButton dec,TextView temp,ProgressBar bar,int stringResId,Context context){
 
         mTempColor1 = R.color.temperature_1;
         mTempColor2 = R.color.temperature_2;
