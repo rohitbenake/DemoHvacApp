@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/panelFullBackground"
+    android:background="@color/hvac_module_background_color"
     tools:context=".MainActivity">
 
     <Button
@@ -61,7 +61,8 @@
         app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="@+id/btn_passenger_temp_inc"
         app:layout_constraintTop_toTopOf="@+id/progressBar_temp_driver"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        />
 
     <Button
         android:id="@+id/btn_driver_temp_dec"

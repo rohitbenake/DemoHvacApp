@@ -51,9 +51,6 @@ public class MainActivity extends AppCompatActivity {
         );
         mPassengerTemperatureUIHandler.setTemperatureChangeListener(mPassengerTempClickListener);
 
-        ProgressBar mProgressBar = findViewById(R.id.progressBar_temp_driver);
-        mProgressBar.setProgress(51);
-
         Log.i(TAG, "onCreate: calling EstablishCarServiceConnection");
         EstablishCarServiceConnection();
     }

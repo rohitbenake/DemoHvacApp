@@ -66,6 +66,9 @@ public class TemperatureUIHandler {
 
         mStringResId = stringResId;
         mContext = context;
+        int defaultColor = mContext.getColor(getTemperatureColor(DEFAULT_TEMPERATURE));
+        mTempTextView.setBackgroundColor(defaultColor);
+        ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(defaultColor);
     }
 
 
@@ -113,8 +116,6 @@ public class TemperatureUIHandler {
                     Log.d(TAG, "key not recognized");
                 }
                 int endColor = getTemperatureColor(mTemperature);
-                Log.d(TAG, "onClick: mTemperature ="+mTemperature+" startColor ="+startColor
-                +"endColor = "+endColor);
                 changeTemperatureColor(startColor, endColor);
                 String temp = String.valueOf(mTemperature);
                 mTempTextView.setText(mContext.getString(mStringResId,
@@ -147,10 +148,8 @@ public class TemperatureUIHandler {
             animator.setDuration(COLOR_CHANGE_ANIMATION_TIME_MS);
             animator.start();
         } else {
-
-            Log.d(TAG, "changeTemperatureColor: endColor = "+endColor);
-            mTempTextView.setBackgroundColor(endColor);
-            ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(endColor);
+            mTempTextView.setBackgroundColor(mContext.getColor(endColor));
+            ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(mContext.getColor(endColor));
         }
     }
 
@@ -160,9 +159,8 @@ public class TemperatureUIHandler {
         public void onAnimationUpdate(ValueAnimator animation) {
             int color = (Integer) animation.getAnimatedValue();
 
-            Log.d(TAG, "onAnimationUpdate: color = "+color);
-            mTempTextView.setBackgroundColor(color);
-           // ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(color);
+            mTempTextView.setBackgroundColor(mContext.getColor(color));
+            ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(mContext.getColor(color));
         }
     };
 
