@@ -4,8 +4,8 @@
     <string name="driver_temp_string">%s</string>
     <string name="increase">+</string>
     <string name="decrease">-</string>
-    <string name="driver_temp_title_name">Driver Temparature</string>
-    <string name="passenger_temp_title_name">Passenger Temparature</string>
+    <string name="driver_temp_title_name">Driver Temperature</string>
+    <string name="passenger_temp_title_name">Passenger Temperature</string>
     <string name="hvac_invalid_temperature">--</string>
     <string name="content_decription">This is image button</string>
 </resources>

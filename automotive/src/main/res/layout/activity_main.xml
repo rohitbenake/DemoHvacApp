@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/hvac_module_background_color"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
     <ImageButton
@@ -62,7 +63,7 @@
         android:rotation="@dimen/progress_rot_val"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.24" />
@@ -113,11 +114,11 @@
         android:id="@+id/passenger_temp_textview"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:background="@drawable/text_background_circle"
         android:gravity="center|center_horizontal"
         android:text="@string/passenger_temp_string"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        android:background="@drawable/text_background_circle"
         app:layout_constraintBottom_toBottomOf="@+id/progressbar_temp_passenger"
         app:layout_constraintEnd_toEndOf="@+id/progressbar_temp_passenger"
         app:layout_constraintStart_toStartOf="@+id/progressbar_temp_passenger"
@@ -128,7 +129,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@android:color/darker_gray"
+        android:background="@android:color/background_dark"
         android:ellipsize="none"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/driver_temp_title_name"
@@ -146,7 +147,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@android:color/darker_gray"
+        android:background="@android:color/background_dark"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/passenger_temp_title_name"
         android:textColor="@android:color/white"
