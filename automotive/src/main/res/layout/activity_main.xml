@@ -8,162 +8,187 @@
     android:visibility="visible"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/btn_driver_temp_inc"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="160dp"
-        android:layout_height="94dp"
-        android:contentDescription="@string/content_decription"
-        android:src="@drawable/button_increase_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.266"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar_temp_driver"
-        app:layout_constraintVertical_bias="0.403" />
-
-    <TextView
-        android:id="@+id/driver_temp_textview"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/text_background_circle"
-        android:gravity="center|center_horizontal"
-        android:text="@string/driver_temp_string"
-        android:textColor="@android:color/white"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/progressBar_temp_driver"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar_temp_driver"
-        app:layout_constraintStart_toStartOf="@+id/progressBar_temp_driver"
-        app:layout_constraintTop_toTopOf="@+id/progressBar_temp_driver" />
-
-    <ProgressBar
-        android:id="@+id/progressBar_temp_driver"
-        style="?android:progressBarStyleHorizontal"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:background="?android:attr/listChoiceIndicatorSingle"
-        android:progress="32"
-        android:progressDrawable="@drawable/circle"
-        android:rotation="@dimen/progress_rot_val"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.546"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.24" />
-
-    <ProgressBar
-        android:id="@+id/progressbar_temp_passenger"
-        style="?android:progressBarStyleHorizontal"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:background="?android:attr/listChoiceIndicatorSingle"
-        android:progress="55"
-        android:progressDrawable="@drawable/circle"
-        android:rotation="@dimen/progress_rot_val"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.24" />
-
-    <ImageButton
-        android:id="@+id/btn_driver_temp_dec"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="160dp"
-        android:layout_height="94dp"
-        android:contentDescription="@string/content_decription"
-        android:src="@drawable/button_decrease_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toEndOf="@+id/btn_driver_temp_inc"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar_temp_driver"
-        app:layout_constraintVertical_bias="0.403" />
-
-    <ImageButton
-        android:id="@+id/btn_passenger_temp_inc"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="160dp"
-        android:layout_height="94dp"
-        android:contentDescription="@string/content_decription"
-        android:src="@drawable/button_increase_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintStart_toEndOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/progressbar_temp_passenger"
-        app:layout_constraintVertical_bias="0.403" />
-
-    <ImageButton
-        android:id="@+id/btn_passenger_temp_dec"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="160dp"
-        android:layout_height="94dp"
-        android:contentDescription="@string/content_decription"
-        android:src="@drawable/button_decrease_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toEndOf="@+id/btn_passenger_temp_inc"
-        app:layout_constraintTop_toBottomOf="@+id/progressbar_temp_passenger"
-        app:layout_constraintVertical_bias="0.403" />
-
-    <TextView
-        android:id="@+id/passenger_temp_textview"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/text_background_circle"
-        android:gravity="center|center_horizontal"
-        android:text="@string/passenger_temp_string"
-        android:textColor="@android:color/white"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/progressbar_temp_passenger"
-        app:layout_constraintEnd_toEndOf="@+id/progressbar_temp_passenger"
-        app:layout_constraintStart_toStartOf="@+id/progressbar_temp_passenger"
-        app:layout_constraintTop_toTopOf="@+id/progressbar_temp_passenger" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@android:color/background_dark"
-        android:ellipsize="none"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/driver_temp_title_name"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.952"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@android:color/background_dark"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/passenger_temp_title_name"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056" />
-
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/VerticalGuideLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/VerticalGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/galleryItemBackground">
+
+            <TextView
+                android:id="@+id/DriverTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@android:color/background_dark"
+                android:ellipsize="none"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/driver_temp_title_name"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/progressBar_temp_driver"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBar_temp_driver"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="304dp"
+                android:layout_height="300dp"
+                android:background="?android:attr/listChoiceIndicatorSingle"
+                android:progress="32"
+                android:progressDrawable="@drawable/circle"
+                android:rotation="@dimen/progress_rot_val"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/driver_temp_textview"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/text_background_circle"
+                android:gravity="center|center_horizontal"
+                android:text="@string/temp_string"
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBar_temp_driver"
+                app:layout_constraintEnd_toEndOf="@+id/progressBar_temp_driver"
+                app:layout_constraintStart_toStartOf="@+id/progressBar_temp_driver"
+                app:layout_constraintTop_toTopOf="@+id/progressBar_temp_driver" />
+
+            <ImageButton
+                android:id="@+id/btn_driver_temp_dec"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="160dp"
+                android:layout_height="94dp"
+                android:contentDescription="@string/content_decription"
+                android:src="@drawable/button_decrease_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.348"
+                app:layout_constraintStart_toEndOf="@+id/btn_driver_temp_inc"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar_temp_driver"
+                app:layout_constraintVertical_bias="0.522" />
+
+            <ImageButton
+                android:id="@+id/btn_driver_temp_inc"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="160dp"
+                android:layout_height="94dp"
+                android:contentDescription="@string/content_decription"
+                android:src="@drawable/button_increase_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar_temp_driver"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/VerticalGuideLine"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/galleryItemBackground">
+
+            <TextView
+                android:id="@+id/PassengerTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@android:color/background_dark"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/passenger_temp_title_name"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/progressbar_temp_passenger"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_passenger_temp_inc"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="160dp"
+                android:layout_height="94dp"
+                android:contentDescription="@string/content_decription"
+                android:src="@drawable/button_increase_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressbar_temp_passenger"
+                app:layout_constraintVertical_bias="0.559" />
+
+            <ImageButton
+                android:id="@+id/btn_passenger_temp_dec"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="160dp"
+                android:layout_height="94dp"
+                android:contentDescription="@string/content_decription"
+                android:src="@drawable/button_decrease_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_passenger_temp_inc"
+                app:layout_constraintTop_toBottomOf="@+id/progressbar_temp_passenger" />
+
+            <ProgressBar
+                android:id="@+id/progressbar_temp_passenger"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:background="?android:attr/listChoiceIndicatorSingle"
+                android:progress="55"
+                android:progressDrawable="@drawable/circle"
+                android:rotation="@dimen/progress_rot_val"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/passenger_temp_textview"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/text_background_circle"
+                android:gravity="center|center_horizontal"
+                android:text="@string/temp_string"
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="@+id/progressbar_temp_passenger"
+                app:layout_constraintEnd_toEndOf="@+id/progressbar_temp_passenger"
+                app:layout_constraintStart_toStartOf="@+id/progressbar_temp_passenger"
+                app:layout_constraintTop_toTopOf="@+id/progressbar_temp_passenger" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

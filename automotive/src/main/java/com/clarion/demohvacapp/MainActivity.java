@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 (ImageButton)findViewById(R.id.btn_driver_temp_dec),
                 (TextView) findViewById(R.id.driver_temp_textview),
                 (ProgressBar) findViewById(R.id.progressBar_temp_driver),
-                R.string.driver_temp_string,
+                R.string.temp_string,
                 this
                 );
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 (ImageButton)findViewById(R.id.btn_passenger_temp_dec),
                 (TextView) findViewById(R.id.passenger_temp_textview),
                 (ProgressBar) findViewById(R.id.progressbar_temp_passenger),
-               R.string.passenger_temp_string,
+               R.string.temp_string,
                 this
         );
         mPassengerTemperatureUIHandler.setTemperatureChangeListener(mPassengerTempClickListener);
