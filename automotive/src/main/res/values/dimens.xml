@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="progress_rot_val">100</dimen>
-    <dimen name="progress_inner_radius_val">35dp</dimen>
-    <dimen name="progress_thickness_val">10dp</dimen>
+    <dimen name="progress_rot_val">90</dimen>
+    <dimen name="progress_inner_radius_val">95dp</dimen>
+    <dimen name="progress_thickness_val">30dp</dimen>
 </resources>

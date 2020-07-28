@@ -21,7 +21,7 @@
     android:viewportWidth="48"
     android:viewportHeight="48">
     <path
-        android:fillColor="#FFFFFF"
+        android:fillColor="#000000"
         android:pathData="M38 26H10v-4h28v4z" />
     <path
         android:pathData="M0 0h48v48H0z" />

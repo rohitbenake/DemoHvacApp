@@ -5,6 +5,8 @@
     <color name="colorAccent">#03DAC5</color>
 
     <color name="temperature_1">#FF5151</color>
+    <color name="temperature_press">#FFFFFF</color>
+
     <color name="temperature_2">#FFD63F</color>
     <color name="temperature_3">#FFD4F4</color>
     <color name="temperature_4">#7AA9F6</color>
@@ -23,5 +25,5 @@
     <color name="hvac_fanspeed_off_enabled_text_color">#13181C</color>
     <color name="hvac_fanspeed_off_disabled_text_color">#89F5F5F5</color>
     <color name="hvac_scrim_color">#3F000000</color>
-
+    <color name="color_black">#000000</color>
 </resources>
