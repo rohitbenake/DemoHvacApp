@@ -5,5 +5,11 @@
     android:thickness="@dimen/progress_thickness_val"
     android:useLevel="true">
 
-    <solid android:color="@color/colorAccent"/>
+<!--    <solid android:color="@color/colorAccent"/>-->
+    <gradient
+        android:startColor="@color/temperature_5"
+        android:centerColor="@color/temperature_2"
+        android:endColor="@color/temperature_1"
+        android:type="sweep"
+        />
 </shape>

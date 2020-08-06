@@ -10,7 +10,9 @@ import android.car.hardware.hvac.CarHvacManager;
 import android.content.ComponentName;
 import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 import android.widget.ImageButton;
@@ -119,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
         if(mCarService == null) {
             Log.d(TAG, "EstablishCarServiceConnection:  mCarService is NULL");
             mCarService = Car.createCar(this,mConnection);
+            requestRefresh();
         }
         else{
             Log.d(TAG, "EstablishCarServiceConnection: mCarService is already created");
@@ -148,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                         Car.HVAC_SERVICE));
 
                 mCarHvacManagerReady.notifyAll();
-
+                Log.d(TAG, "onCarServiceReady: mCarHvacManagerReady notified");
             } catch (CarNotConnectedException e) {
                 Log.e(TAG, "Car not connected in onServiceConnected");
             }
@@ -212,4 +215,30 @@ public class MainActivity extends AppCompatActivity {
                     mCarHvacHandler.setPassengerTemperature(temperature);
                 }
             };
+
+    public void requestRefresh() {
+        final AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... unused) {
+                synchronized (mCarHvacManagerReady) {
+                    while (mCarHvacHandler.getCarHvacManager() == null) {
+                        try {
+                            mCarHvacManagerReady.wait();
+                        } catch (InterruptedException e) {
+                            // We got interrupted so we might be shutting down.
+                            return null;
+                        }
+                    }
+                }
+                Log.d(TAG, "doInBackground: requestRefresh is called");
+                mCarHvacHandler.Refresh();
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void unused) {
+            }
+        };
+        task.execute();
+    }
 }

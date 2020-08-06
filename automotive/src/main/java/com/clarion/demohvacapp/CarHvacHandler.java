@@ -59,6 +59,11 @@ public class CarHvacHandler {
         }
     }
 
+    public CarHvacManager getCarHvacManager()
+    {
+        return mCarHvacManager;
+    }
+
     public void initHvacManager(CarHvacManager carManager) {
         mCarHvacManager = carManager;
         try {
@@ -128,6 +133,13 @@ public class CarHvacHandler {
                 }
             }
         }
+    }
+
+    public void Refresh()
+    {
+        Log.d(TAG, "Refresh: request sent");
+        fetchTemperature(DRIVER_ZONE_ID);
+        fetchTemperature(PASSENGER_ZONE_ID);
     }
 
     private void fetchTemperature(int zone) {
@@ -203,5 +215,4 @@ public class CarHvacHandler {
         };
         task.execute();
     }
-
 }

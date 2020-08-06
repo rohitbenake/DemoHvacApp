@@ -171,7 +171,7 @@
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:background="?android:attr/listChoiceIndicatorSingle"
-                android:progress="55"
+                android:progress="99"
                 android:progressDrawable="@drawable/circle"
                 android:rotation="@dimen/progress_rot_val"
                 app:layout_constraintBottom_toBottomOf="parent"

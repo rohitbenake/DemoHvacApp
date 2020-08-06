@@ -68,7 +68,7 @@ public class TemperatureUIHandler {
         mContext = context;
         int defaultColor = mContext.getColor(getTemperatureColor(DEFAULT_TEMPERATURE));
         //mTempTextView.setBackgroundColor(defaultColor);
-        ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(defaultColor);
+        //((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(defaultColor);
     }
 
 
@@ -149,7 +149,7 @@ public class TemperatureUIHandler {
             animator.start();
         } else {
             //mTempTextView.setBackgroundColor(mContext.getColor(endColor));
-            ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(mContext.getColor(endColor));
+            //((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(mContext.getColor(endColor));
         }
     }
 
@@ -160,7 +160,7 @@ public class TemperatureUIHandler {
             int color = (Integer) animation.getAnimatedValue();
 
             //mTempTextView.setBackgroundColor(mContext.getColor(color));
-            ((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(mContext.getColor(color));
+            //((GradientDrawable) mProgressbar.getProgressDrawable()).setColor(mContext.getColor(color));
         }
     };
 
